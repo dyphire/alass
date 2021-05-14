@@ -89,7 +89,7 @@ impl Aligner {
                 fn accum(d: &mut [RatingDeltaDelta], idx: TimeDelta, x: RatingDeltaDelta, sigma_min: TimeDelta) {
                     let idx: usize = (idx - sigma_min).as_i64().try_into().unwrap();
                     d[idx] = d[idx] + x;
-                };
+                }
 
                 accum(
                     &mut deltas,
